@@ -1,25 +1,3 @@
-function fb_loadSDK()
-{
-window.fbAsyncInit = function() {
-    FB.init({
-        appId   : '392795464233014',
-        oauth   : true,
-        status  : true, // check login status
-        cookie  : true, // enable cookies to allow the server to access the session
-        xfbml   : true // parse XFBML
-    });
-
-  };
-  
-  (function(d, s, id){
-		 var js, fjs = d.getElementsByTagName(s)[0];
-		 if (d.getElementById(id)) {return;}
-		 js = d.createElement(s); js.id = id;
-		 js.src = "//connect.facebook.net/en_US/sdk.js";
-		 fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-}
-
 function fb_login(){
     FB.login(function(response) {
 
