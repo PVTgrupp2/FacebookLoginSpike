@@ -9,14 +9,9 @@ function fb_login(){
 
             FB.api('/me', function(response) {
                 user_email = response.email; //get user email
-          // you can store this data into your database             
+          // you can store this data into your database  
+			document.getElementById('status').innerHTML = 'Welcome, ' + response.name + '!';		  
             });
-			
-			FB.api('/me', function(response) {
-       console.log('Successful login for: ' + response.name);
-       document.getElementById('status').innerHTML =
-         'Welcome, ' + response.name + '!';
-     });
         
 		} else {
             //user hit cancel button
