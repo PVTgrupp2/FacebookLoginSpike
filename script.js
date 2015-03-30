@@ -25,6 +25,12 @@ function fb_login(){
 	
 	
 }
+
+function fb_logout(){
+	FB.logout(function(response) {
+        // Person is now logged out
+    });
+}
 (function() {
     var e = document.createElement('script');
     e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
