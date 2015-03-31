@@ -2,19 +2,13 @@
 <html>
 	<head>
 		<title>FacebookLoginSpike</title>
+		<script type="text/javascript" src="jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="jquery.fblogin.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 <body>
 	<script>
 	// Load Facebook SDK
-		  window.fbAsyncInit = function() {
-		FB.init({
-		  appId      : '392795464233014',
-		  xfbml      : true,
-		  version    : 'v2.3'
-		});
-	  };
-
 	  (function(d, s, id){
 		 var js, fjs = d.getElementsByTagName(s)[0];
 		 if (d.getElementById(id)) {return;}
@@ -24,9 +18,9 @@
 	   }(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<a href="#" onclick="fb_login()" ><img src="login.png" alt="login"></a>
+	<a href="#" id="fblogin" ><img src="login.png" alt="login"></a>
 
-	<a href="#" onclick="fb_logout()">Logga ut</a>
+	<a href="#" id="fblogout">Logga ut</a>
 	<div id="status">
 	</div>
 	
